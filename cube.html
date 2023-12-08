@@ -1,0 +1,161 @@
+<html>
+  <head>
+    <script>
+        window.addEventListener('load', function() {
+          var audio = new Audio('bgm.mp3');
+          audio.load();
+          audio.play();
+        });
+      </script>
+      <!-- 3D cube Begins -->
+      <style>
+        /* Css 3d cube*/
+        body {
+background: #000;
+}
+.wrap { 
+margin-top: -500px;
+perspective: 1000px; 
+perspective-origin: 50% 50%; 
+}
+.cube { 
+margin: auto; 
+position: relative; 
+height: 400px; 
+width: 400px; 
+transform-style: preserve-3d; 
+} 
+.cube div {
+position: absolute; 
+box-sizing: border-box;  
+height: 100%; 
+width: 100%; 
+opacity: 0.9; 
+background-color: #fff;
+color: #ffffff; 
+}
+.cube div img {
+height: 100%;
+width: 100%;
+}
+.front { 
+transform: translateZ(300px);
+} 
+.back { 
+transform: translateZ(-100px) rotateY(180deg);
+} 
+.right { 
+transform: rotateY(-270deg) translateX(100px); 
+transform-origin: top right;
+}  
+.left {
+transform: rotateY(270deg) translateX(-100px); 
+transform-origin: center left;
+} 
+.top { 
+transform: rotateX(-270deg)              translateY(-100px); 
+transform-origin: top center; 
+} 
+.bottom {
+transform: rotateX(270deg) translateY(100px); 
+transform-origin: bottom center;
+}
+@keyframes rotate { 
+from {
+    transform: rotateX(0deg) rotateY(0deg);
+}
+to {
+    transform: rotateX(360deg) rotateY(360deg);
+}
+} 
+.cube { 
+animation: rotate 24s infinite linear; 
+}
+.wrap:active .front { 
+transform: translateZ(300px); 
+} 
+.wrap:active .back {
+transform: translateZ(-150px) rotateY(180deg);
+} 
+.wrap:active .right {
+transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+} 
+.wrap:active .left {
+transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+} 
+.wrap:active .top {
+transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+} 
+.wrap:active .bottom {
+transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+.cube div {
+transition: transform 0.2s ease-in;
+}
+
+/* end of cube */
+  </style>
+</head>
+
+<body>
+        <canvas></canvas>
+            <script>
+                  var t = 0;
+            var c = document.querySelector("canvas");     
+            var $ = c.getContext('2d');
+            c.width = window.innerWidth;
+            c.height = window.innerHeight;
+            $.fillStyle = 'hsla(0,0%,0%,1)';
+    
+            window.addEventListener('resize', function() {
+              c.width = window.innerWidth;
+              c.height = window.innerHeight;
+            }, false);
+    
+            function draw() {
+              $.globalCompositeOperation = 'source-over';
+              $.fillStyle = 'hsla(0,0%,0%,.1)';
+              $.fillRect(0, 0, c.width, c.height);
+              var foo, i, j, r;
+              foo = Math.sin(t) * 2 * Math.PI;
+              for (i=0; i<400; ++i) {
+                r = 400 * Math.sin(i * foo);
+                $.globalCompositeOperation = '';
+                $.fillStyle = 'hsla(' + i + 12 + ',100%, 60%,1)';
+                $.beginPath();
+                $.arc(Math.sin(i) * r + (c.width / 2), 
+                      Math.cos(i) * r + (c.height / 2), 
+                      1.5, 0, Math.PI * 2);
+                $.fill();
+    
+              }
+              t += 0.000005;
+              return t %= 2 * Math.PI;
+    
+            };
+    
+            function run() {
+              window.requestAnimationFrame(run);
+              draw();
+            }
+            run();
+            </script>
+              <div class="wrap"> 
+               <div class="cube"> 
+                   <div class="front"><img src="arz1.gif"></div> 
+                   <div class="back"><img src="arz2.jpg"></div>
+                    <div class="top"><img src="arz3.jpg"></div> 
+                    <div class="bottom"><img src="arz4.jpg"></div> 
+                    <div class="left"><img src="arz5.jpg"></div> 
+                    <div class="right"><img src="arz6.jpg"></div>  
+                </div> 
+          
+      <!--3D Cube ends  -->
+                    </div>
+                </div>
+                 
+            </main>
+        </div>
+</body>
+
+</html>

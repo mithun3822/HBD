@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cards</title>
+    <script>
+        window.addEventListener('load', function() {
+          var audio = new Audio('bgmcard.mp3');
+          audio.load();
+          audio.play();
+        });
+var count = 0;
+function throwMe(card){
+    if(count%2==0){
+        card.classList.add("throwL");
+    }
+    else{
+        card.classList.add("throwR");
+    }
+    count ++ ;
+}
+        
+    </script>
+   <style>
+
+@import  url("https://fonts.googleapis.com/css?family=Source+Code+Pro") ;
+
+
+* {
+    margin :0;
+    padding:0;
+    box-sizing:border-box;
+    outline:none;
+}
+
+.wrapper {
+    position:absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    top :0;
+    left:0;
+    width :100%;
+    height:100%;
+    background-color:#eee;
+}
+
+.center{
+    color:#888;
+    align-items:center;
+    justify-content:center;
+}
+
+.center p{
+    display:block;
+    padding:10px;
+    text-align:center;
+}
+
+.cards {
+    position:relative;
+    width:300px;
+    height:400px;
+}
+.card {
+    position:absolute;
+    top :50%;
+    left:50%;
+    min-width:250px;
+    background-color:#fff;
+    box-shadow:0 0 2px #00000045;
+    transition:all 1s ease-out;
+    font-size  :14px;
+    line-height:14px;
+    padding:10px;
+    font-family:'Source Code Pro';
+    transform:translate(-50%,-50%);
+}
+
+.throwL{
+    transform: translate(-50%,-50%) rotate(-45deg);
+    margin-left:-100%;
+    opacity:0;
+}
+
+.throwR{
+    transform: translate(-50%,-50%) rotate(45deg);
+    margin-left:100%;
+    opacity:0;
+}
+
+.blue {
+    color: #1976d2 ;
+}
+
+.red {
+    color:#e91e63;
+}
+
+   </style> 
+</head>
+<body>
+<div class="wrapper">
+<div class="cards">
+<div class="card center">
+    <p>
+        
+        <br>
+        <br>
+        Happy
+        <br>
+        <br>
+        21st
+        <br>
+        <br>
+        Bday
+        <br>
+        <bR>
+        Aaruse
+        <br>
+        <br>
+        < ♥ >
+        <br>
+        <br>
+        
+    </p>
+    
+ <!--Card-->
+<div class="card" onclick="throwMe(this)"
+style="color:#c2185b;">
+############################<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+#      We Never Runs       #<br>
+#                          #<Br>
+#      Out of Topics       #<Br>
+#                          #<Br>
+#      To Talk About       #<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+#      Being With U        #<Br>
+#                          #<Br>
+#      Hours Seems..       #<Br>
+#                          #<Br>
+#          To Be           #<Br>
+#                          #<Br>
+#         Minutes          #<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+############################<Br>
+</div> 
+    
+<!--Card-->
+<div class="card" onclick="throwMe(this)"
+style="color:#c2185b;">
+############################<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+#    If Iam Angry,         #<br>
+#                          #<Br>
+#    U r there to Calm Me  #<Br>
+#                          #<Br>
+#                          #<Br>
+#    If Iam Upset,         #<Br>
+#                          #<Br>
+#    U r there to cheer    #<Br>
+#                          #<Br>
+#         me Up            #<Br>
+#                          #<Br>
+#                          #<Br>
+#    If Iam Alone,         #<Br>
+#                          #<Br>
+#        U r there to      #<Br>
+#                          #<Br>
+#         Accompany Me..   #<Br>
+#                          #<Br>
+#                          #<Br>
+############################<Br>
+</div>
+    
+<!--Card-->
+<div class="card" onclick="throwMe(this)"
+style="color:#c2185b;">
+############################<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+#    There will b alwayz   #<br>
+#                          #<Br>
+#    new people and new    #<Br>
+#                          #<Br>
+#         Places...        #<Br>
+#                          #<Br>
+#                          #<Br>
+#   Bt I promise that...   #<Br>
+#                          #<Br>
+#   I will b alwayz the    #<Br>
+#                          #<Br>
+#   old me to u, and our   #<Br>
+#                          #<Br>
+#  bond will stay forever  #<Br>
+#                          #<Br>
+#        with same         #<Br>
+#                          #<Br>
+#     Luv and Happiness    #<Br>
+#                          #<Br>
+############################<Br>
+</div>
+<!--Card-->
+<div class="card" onclick="throwMe(this)"
+style="color:#c2185b;">
+############################<Br>
+#                          #<Br>
+#    Excitement :          #<Br>
+#                          #<br>
+#        Seeing You        #<Br>
+#                          #<Br>
+#                          #<Br>
+#    Happiness :           #<Br>
+#                          #<Br>
+#        Talking With U    #<Br>
+#                          #<Br>
+#                          #<Br>
+#    Jealousy :            #<Br>
+#                          #<Br>
+#        When U Place      #<Br>
+#                          #<Br>
+#        Someone Above Me  #<Br>
+#                          #<Br>
+#                          #<Br>
+#    Fear :                #<Br>
+#                          #<Br>
+#        Losing U          #<Br>
+#                          #<Br>
+############################<Br>
+</div>
+<!--Card-->
+<div class="card" onclick="throwMe(this)"
+style="color:#c2185b;">
+############################<Br>
+#                          #<Br>
+#                          #<Br>
+#    I Know Sometimes,     #<br>
+#                          #<Br>
+#         I Hurt U         #<Br>
+#                          #<Br>
+#      And Sometimes,      #<Br>
+#                          #<Br>
+#        I Overreact       #<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+#  When I Get Rude With U  #<Br>
+#                          #<Br>
+#     Just Think That      #<Br>
+#                          #<Br>
+#   Iam Always Nice With   #<Br>
+#                          #<Br>
+#    Those Who Doesn't     #<Br>
+#                          #<Br>
+#       Matter To Me       #<Br>
+#                          #<Br>
+############################<Br>
+</div>
+<!--Card-->
+<div class="card" onclick="throwMe(this)"
+style="color:#c2185b;">
+############################<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+#         I Text U         #<br>
+#                          #<Br>
+#     When I Feel Gud,     #<Br>
+#                          #<Br>
+#     When I Feel Down,    #<Br>
+#                          #<Br>
+#   When I Feel Nothing,   #<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+#   As I Know, My Moods    #<Br>
+#                          #<Br>
+#      Are Temporary       #<Br>
+#                          #<Br>
+#       But U R Not        #<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+############################<Br>
+</div>
+<!--Card-->
+<div class="card" onclick="throwMe(this)"
+style="color:#c2185b;">
+############################<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<br>
+#    The Most Beautiful    #<Br>
+#                          #<Br>
+#      Thing Between       #<Br>
+#                          #<Br>
+#        Us Is That        #<Br>
+#                          #<Br>
+#     Ours Yesterdays      #<Br>
+#                          #<Br>
+#      Fights Doesn't      #<Br>
+#                          #<Br>
+#       Effect Our         #<Br>
+#                          #<Br>
+#   Today's Conversation   #<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+############################<Br>
+</div>
+<!--Card-->
+<div class="card" onclick="throwMe(this)"
+style="color:#c2185b;">
+############################<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+#   When We Met for the    #<Br>
+#                          #<Br>
+#        First Time,       #<Br>
+#                          #<Br>
+#                          #<Br>
+#   I Honestly didn't      #<Br>
+#                          #<Br>
+#   Know that you were     #<Br>
+#                          #<Br>
+#   going to be so....     #<Br>
+#                          #<Br>
+#                          #<Br>
+#     Important to Me      #<Br>
+#                          #<Br>
+#                          #<Br>
+#                          #<Br>
+#            &#128522;            #<Br>
+#                          #<Br>
+#                          #<Br>
+############################
+</div>
+<!--Card-->
+<div class="card beat" onclick="throwMe(this)" 
+style="color:#c2185b;">
+############################<br>
+#                          #<br>
+#      HAPPY BIRTHDAY      #<br>
+#         Aarusee          #<br>
+#                          #<br>
+#                          #<br>
+#                          #<br>
+#                          #<br>
+#    <span class="blue">*</span>    <span class="red">*</span><span class="red">*</span>   <span class="red">*</span><span class="red">*</span>     <span class="blue">*</span>    #<br>
+#   <span class="blue">*</span>   <span class="red">*</span><span class="red">*</span><span class="red">*</span><span class="red">*</span><span class="red">*</span> <span class="red">*</span><span class="red">*</span><span class="red">*</span><span class="red">*</span><span class="red">*</span>    <span class="blue">*</span>   #<br>
+#  <span class="blue">*</span>   <span class="red">*************</span>    <span class="blue">*</span>  #<br>
+# <span class="blue">*</span>     <span class="red">***********</span>      <span class="blue">*</span> #<br>
+#  <span class="blue">*</span>      <span class="red">*******</span>       <span class="blue">*</span>  #<br>
+#   <span class="blue">*</span>       <span class="red">***</span>        <span class="blue">*</span>   #<br>
+#    <span class="blue">*</span>       <span class="red">*</span>        <span class="blue">*</span>    #<br>
+#                          #<br>
+#                          #<br>
+#                          #<br>
+#  ~~~~~~~~~~~~~~~~~~~~~~  #<br>
+#    <span class="blue">WITH LOTS OF LOVE</span>     #<br>
+#  ~~~~~~~~~~~~~~~~~~~~~~  #<br>
+#          Mithuz          #<br>
+#                          #<br>
+############################<br>
+</div>
+<!--Cards End-->
+</div>
+</div>
+</body>
+
+</html>
